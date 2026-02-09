@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vegetable Cutting Request</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Vegetable Cutting Request</h1>
+        <form id="cutting-form">
+            <div id="items-container">
+                <div class="item card p-3 mb-3">
+                    <h3>Item 1</h3>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="vegetable-0" class="form-label">Vegetable Item</label>
+                            <select class="form-select" id="vegetable-0" required>
+                                <option value="">Choose...</option>
+                                <option value="carrot">Carrot</option>
+                                <option value="potato">Potato</option>
+                                <option value="onion">Onion</option>
+                                <option value="tomato">Tomato</option>
+                                <option value="cucumber">Cucumber</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="quantity-0" class="form-label">Quantity</label>
+                            <input type="number" class="form-control" id="quantity-0" min="1" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="size-0" class="form-label">Size</label>
+                            <select class="form-select" id="size-0" required>
+                                <option value="">Choose...</option>
+                                <option value="small">Small</option>
+                                <option value="medium">Medium</option>
+                                <option value="large">Large</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="style-0" class="form-label">Cutting Style</label>
+                            <select class="form-select" id="style-0" required>
+                                <option value="">Choose...</option>
+                                <option value="slices">Slices</option>
+                                <option value="dices">Dices</option>
+                                <option value="julienne">Julienne</option>
+                                <option value="chunks">Chunks</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-outline-danger remove-item" style="display: none;">Remove</button>
+                </div>
+            </div>
+            <button type="button" class="btn btn-outline-secondary me-2" id="add-item">Add Item</button>
+            <button class="btn btn-primary" type="submit">Submit Request</button>
+        </form>
+        <div id="summary" style="display: none;">
+            <h2 class="text-center mb-4">Request Summary</h2>
+            <div id="summary-content"></div>
+            <button class="btn btn-outline-primary" id="back-btn">Back to Form</button>
+        </div>
+    </div>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
