@@ -187,6 +187,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
             `;
         });
+        // Add miscellaneous requests if present
+        const miscRequests = document.getElementById('misc-requests').value.trim();
+        if (miscRequests) {
+            summaryHtml += `
+                <div class="card p-3 mb-3 bg-light">
+                    <h5>Miscellaneous Requests</h5>
+                    <p>${miscRequests.replace(/\n/g, '<br>')}</p>
+                </div>
+            `;
+        }
         summaryContent.innerHTML = summaryHtml;
         summary.style.display = 'block';
         form.style.display = 'none';

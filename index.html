@@ -51,7 +51,13 @@
                 </div>
             </div>
             <button type="button" class="btn btn-outline-secondary me-2" id="add-item">Add Item</button>
-            <button class="btn btn-primary" type="submit">Submit Request</button>
+            <div class="mb-3 mt-3">
+                <label for="misc-requests" class="form-label"></label>
+                <textarea class="form-control" id="misc-requests" rows="3" placeholder="Any other miscellaneous requests..."></textarea>
+            </div>
+            <div class="d-flex justify-content-end">
+                <button class="btn btn-primary" type="submit">Submit Request</button>
+            </div>
         </form>
         <div id="summary" style="display: none;">
             <h2 class="text-center mb-4">Request Summary</h2>
